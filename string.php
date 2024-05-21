@@ -33,4 +33,51 @@ echo "\n";
 // string replace
 echo str_replace('avio', 'ower', $sampleName);
 echo "\n";
+
+// trim 
+$text   = "\t\tThese are a few words :) ...  ";
+$trimmed = trim($text);
+var_dump($trimmed);
+echo "\n";
+
+$hello  = "Hello World";
+$trimmedHello = trim($hello, "Hdle");
+var_dump($trimmedHello);
+
+echo "\n";
+
+// string upper and lower
+$myName = "FLavio";
+echo strtoupper($myName);
+echo "\n";
+echo strtolower($myName);
+echo "\n";
+// First word is uppercase
+echo ucfirst($myName);
+echo "\n";
+
+// finds the firsts occurrence of a substring in the string
+$mystring = 'abc';
+$findme   = 'a';
+$pos = strpos($mystring, $findme);
+echo $pos;
+
+echo "\n";
+
+// Split a string into an array
+$pizza  = "piece1 piece2 piece3 piece4 piece5 piece6";
+$pieces = explode(" ", $pizza);
+
+echo $pieces[0]; // piece1
+echo "\n";
+echo $pieces[1]; // piece2
+echo "\n";
+echo $pieces[2]; // piece3
+
+echo "\n";
+
+// join array elements in a string
+$array = ['lastname', 'email', 'phone'];
+echo (implode(",", $array));
+
 ?>
