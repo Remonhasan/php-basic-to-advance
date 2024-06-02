@@ -75,4 +75,41 @@ echo "\n";
 echo "Missing element: \n ";
 $array1 = [1, 2, 3, 5, 6, 7];
 $missingNumber = array_values(array_diff(range(min($array1), max($array1)), $array1))[0];
+
+echo $missingNumber;
+
+echo "\n";
+echo "Maximum element: \n ";
+// Get maximum Value of the array 
+$maximumValue = max($array1);
+echo $maximumValue;
+
+echo "\n";
+echo "Minimum element: \n ";
+// Get minimum Value of the array 
+$minimumValue = min($array1);
+echo $minimumValue;
+
+echo "\n";
+echo "Total Individual element Count: \n ";
+$result = array_count_values($array1);
+print_r($result);
+
+
+echo "\n";
+echo "Array Filter (even number): \n ";
+function is_even($value) {
+    return $value % 2 == 0;
+}
+
+// Use array_filter() to filter the array
+$result = array_filter($array1, 'is_even');
+print_r($result);
+
+
+echo "\n";
+echo "Array to String: \n ";
+// Use implode() to join the array elements into a string
+$result = implode(", ", $array1);
+echo $result;
 ?>
